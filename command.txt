@@ -1,0 +1,14 @@
+DOCKER
+-------------------------------------------------------------------------------------------------------------------------
+docker images                                                      Lista imagenes
+docker images -a                                                   Lista imagenes (incluye las inactivas)
+docker image rm <image_id>                                         Elimina una imagen
+
+docker ps                                                          Lista los contenendores 
+docker ps -a                                                       Lista los contenendores  (incluye los inactivos)
+
+docker system prune                                                Elimina los contenedores inactivos
+
+docker build -t <image_tag> .                                      Crea un contenedor
+
+docker run -it -d -p <port_externo>:<port_interno> <image_id>      Ejecuta un contenedor -d (lo ejecuta en segundo plano)
