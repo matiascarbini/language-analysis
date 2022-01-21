@@ -5,8 +5,8 @@ from flask import Blueprint, jsonify, request
 
 sentimentAnalysis_api = Blueprint('sentimentAnalysis_api', __name__)
 
-@sentimentAnalysis_api.route('/sentiment-analysis', methods=["POST"])
-def sentimentAnalysis():      
+@sentimentAnalysis_api.route('/sentiment-analysis/text', methods=["POST"])
+def sentimentAnalysisText():      
   text = request.json["text"]  
   result = analyzer.predict(text)  
     

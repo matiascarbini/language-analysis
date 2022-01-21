@@ -3,3 +3,8 @@ pysentimiento
 flask
 gunicorn
 torch==1.10.1+cpu
+tweepy
+python-decouple
+matplotlib
+wordcloud
+nltk
