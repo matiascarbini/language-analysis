@@ -34,7 +34,7 @@ def wordCloudTwitterTimeline():
   user = request.json["user"]  
   
   arrDatos = []
-  for tweet in tweepy.Cursor(api.user_timeline, screen_name=user, tweet_mode="extended").items(50):        
+  for tweet in tweepy.Cursor(api.user_timeline, screen_name=user, tweet_mode="extended").items(100):        
     text = clearText(tweet._json["full_text"])
     arrDatos.extend(text.split())
   
