@@ -23,7 +23,7 @@ ACCESS_TOKEN_SECRET = config('ACCESS_TOKEN_SECRET', '')
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-api = tweepy.API(auth, wait_on_rate_limit=True) #, wait_on_rate_limit_notify=True)
+api = tweepy.API(auth, wait_on_rate_limit=True)
 
 from flask import Blueprint, jsonify, request, send_from_directory
 
@@ -65,11 +65,22 @@ def clearText(text):
   text = re.sub(r'\d+', '', text)
   text = text.translate(str.maketrans('', '', string.punctuation))
   text = text.strip()  
+  text = text.lower()
+  
+  replacements = (
+    ("á", "a"),
+    ("é", "e"),
+    ("í", "i"),
+    ("ó", "o"),
+    ("ú", "u"),
+  )
+  for a, b in replacements:
+    text = text.replace(a, b).replace(a.upper(), b.upper())
   
   stop_words = set(stopwords.words('spanish'))
   token = word_tokenize(text)
   text = [i for i in token if not i in stop_words]  
-  
+    
   return " ".join(text)
 
 @wordCloud_api.route('/image/<path:filename>')
