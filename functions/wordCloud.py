@@ -13,6 +13,8 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import nltk
 nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('corpus')
 
 CONSUMER_KEY = config('CONSUMER_KEY', '')
 CONSUMER_SECRET = config('CONSUMER_SECRET', '')
