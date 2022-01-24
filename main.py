@@ -1,6 +1,7 @@
 from flask import Flask
 from functions.sentimentAnalysis import sentimentAnalysis_api
 from functions.wordCloud import wordCloud_api
+from functions.chatbot import chatbot_api
 from decouple import config
 
 # creo carpeta temporal
@@ -12,6 +13,7 @@ app = Flask(__name__)
 
 app.register_blueprint(sentimentAnalysis_api)
 app.register_blueprint(wordCloud_api)
+app.register_blueprint(chatbot_api)
 
 @app.route('/')
 def getInit():  

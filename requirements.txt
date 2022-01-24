@@ -8,3 +8,5 @@ python-decouple
 matplotlib
 wordcloud
 nltk
+chatterbot
+chatterbot-corpus
