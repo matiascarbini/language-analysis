@@ -1,0 +1,1 @@
+en esta carpeta se crea la base de datos del chatbot
