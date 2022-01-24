@@ -1,5 +1,5 @@
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
+#from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.trainers import ListTrainer
 from chatterbot.response_selection import get_most_frequent_response
 #from chatterbot.response_selection import get_first_response
@@ -45,14 +45,24 @@ def chatBotTrainer():
   
   chatbot.storage.drop()
   
-  if trainerList:    
-    trainer = ChatterBotCorpusTrainer(chatbot)
-    trainer.train("./trainer/saludos.yml")
-        
+  trainer = ListTrainer(chatbot)
+  trainer.train([
+    "Hola"
+    "Hola, ¿en que puedo ayudarte?"
+    "Buenas"
+    "Buenas, ¿en que puedo ayudarte?"
+    "Buenas, ¿que tal?"
+    "Buenas, muy bien, espero que vos tambien!, ¿en que puedo ayudarte?"
+    "Buenos días"
+    "Buenos días, ¿en que puedo ayudarte?"
+    "Buenas tardes"
+    "Buenas tardes, ¿en que puedo ayudarte?"
+    "Buenas noches"
+    "Buenas noches, ¿en que puedo ayudarte?"    
+  ])  
+  
+  if trainerList:        
     trainer = ListTrainer(chatbot)
     trainer.train(trainerList)
-  else: 
-    trainer = ChatterBotCorpusTrainer(chatbot)
-    trainer.train("./trainer/saludos.yml")
 
   return "Entrenamiento finalizado"
