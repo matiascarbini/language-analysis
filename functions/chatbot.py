@@ -59,6 +59,10 @@ def chatBotTrainer():
     "Buenas tardes, ¿en que puedo ayudarte?",
     "Buenas noches",
     "Buenas noches, ¿en que puedo ayudarte?",
+    "Gracias, hasta luego",
+    "Gracias a vos, saludos",
+    "Chau, nos vemos!",
+    "Chau, gracias por comunicarte con nosotros"
   ])  
   
   if trainerList:        
