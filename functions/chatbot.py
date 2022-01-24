@@ -47,18 +47,18 @@ def chatBotTrainer():
   
   trainer = ListTrainer(chatbot)
   trainer.train([
-    "Hola"
-    "Hola, ¿en que puedo ayudarte?"
-    "Buenas"
-    "Buenas, ¿en que puedo ayudarte?"
-    "Buenas, ¿que tal?"
-    "Buenas, muy bien, espero que vos tambien!, ¿en que puedo ayudarte?"
-    "Buenos días"
-    "Buenos días, ¿en que puedo ayudarte?"
-    "Buenas tardes"
-    "Buenas tardes, ¿en que puedo ayudarte?"
-    "Buenas noches"
-    "Buenas noches, ¿en que puedo ayudarte?"    
+    "Hola",
+    "Hola, ¿en que puedo ayudarte?",
+    "Buenas",
+    "Buenas, ¿en que puedo ayudarte?",
+    "Buenas, ¿que tal?",
+    "Buenas, muy bien, espero que vos tambien!, ¿en que puedo ayudarte?",
+    "Buenos días",
+    "Buenos días, ¿en que puedo ayudarte?",
+    "Buenas tardes",
+    "Buenas tardes, ¿en que puedo ayudarte?",
+    "Buenas noches",
+    "Buenas noches, ¿en que puedo ayudarte?",
   ])  
   
   if trainerList:        
