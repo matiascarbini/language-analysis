@@ -9,4 +9,4 @@ matplotlib
 wordcloud
 nltk
 chatterbot
-chatterbot-corpus
+chatterbot-corpus==1.1.0
