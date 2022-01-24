@@ -9,7 +9,7 @@ chatbot = ChatBot(
   'Experto',
   
   storage_adapter='chatterbot.storage.SQLStorageAdapter',
-  database_uri='sqlite:///trainer/database.sqlite3',
+  database_uri='sqlite:///bot/database.sqlite3',
 
   logic_adapters=[
     {
