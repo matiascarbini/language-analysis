@@ -3,3 +3,5 @@ env/
 __pycache__/
 functions/__pycache__/
 .env
+sentence_tokenizer.pickle
+bot/database.sqlite3
